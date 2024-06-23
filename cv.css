@@ -1,0 +1,661 @@
+html{
+    font-family: "Cascadia code";
+}
+
+html::-webkit-scrollbar{
+    display: none;
+}
+
+html{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+body{
+    background-color: rgb(30,30,30);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: hidden; /* TO DO, SET BACK TO HIDDEN */
+    
+
+}
+
+.textbox{
+    color: white;
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%,-50%);
+    font-size: 40;
+    text-align: center;
+    width: 100vw;
+}
+
+@keyframes fadeinfadeout {
+    0% {opacity: 0;}
+    40% {opacity: 1;}
+    60% {opacity: 1;}
+    100% {opacity: 0; z-index: 0;}   
+}
+
+@keyframes fadeinfadeoutsp {
+    0% {opacity: 0;}
+    40% {opacity: 1;}
+    60% {opacity: 1;}
+    100% {opacity: 1; z-index: 0;}   
+}
+
+
+@keyframes moveup {
+    from {transform: translate(-50%,-50%);}
+    to {transform: translate(-50%,-200%);}
+}
+
+@keyframes buttonappears {
+    from {transform: translate(-50%,-30vh); opacity: 0; z-index: -2;}
+    to {transform: translate(-50%,-20vh); opacity: 1; z-index: 2;}
+}
+
+#tb1{
+    animation-name: fadeinfadeout;
+    animation-delay: 0s;
+    animation-duration: 3.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
+    
+}
+
+#tb2{
+    animation-name: fadeinfadeout;
+    animation-delay: 4s;
+    animation-duration: 3.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
+    opacity: 0;
+}
+
+
+#tb3{
+    animation-name: fadeinfadeoutsp, moveup;
+    animation-delay: 8s, 10s;
+    animation-duration: 2s, 2s;
+    animation-timing-function: ease-in-out,ease-in-out;
+    animation-fill-mode: both,both;
+    opacity: 0;
+       
+}
+
+.button {
+    height:8vh;
+    width: 14vw;
+    position: relative;
+    background-color: transparent;
+    cursor: pointer;
+    border: 2px solid #ffffff;
+    overflow: hidden;
+    border-radius: 30px;
+    color: #ffffff;
+    transition: all 0.5s ease-in-out;
+    left: 50vw;
+    top: 70vh;
+    transform: translate(-50%,-20vh);
+    font-family: 'Cascadia code';
+    font-size: larger;
+    animation-name: buttonappears;
+    animation-duration: 2s;
+    animation-delay: 11.5s;
+    animation-fill-mode: forwards;
+    z-index: -2;
+
+    opacity: 0;
+
+  }
+  
+  .btn-txt {
+    z-index: 2;
+    font-weight: 800;
+    letter-spacing: 4px;
+  }
+  
+  .type1::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 0.5s ease-in-out;
+    background-color: #ffffff;
+    border-radius: 30px;
+    visibility: hidden;
+    height: 10px;
+    width: 10px;
+    z-index: -1;
+  }
+  
+    .button:hover {
+    box-shadow: 1px 1px 200px #ffffff70;
+    color: rgb(21,21,21);
+    border: none;
+    }
+
+    .type1:hover::after {
+    visibility: visible;
+    transform: scale(100) translateX(2px);
+    }
+  
+@keyframes disappear {
+    from {opacity: 1; transform: translate(-50%,-200%);}
+    to {opacity: 0; transform: translate(-50%,-200%);}
+
+}
+@keyframes disappear2 {
+    from {opacity: 1;}
+    to {opacity: 0;}
+
+}
+
+
+#div1{
+    display: grid;
+    grid-template-columns: 0.8fr 1fr;
+    grid-template-rows: 0.8fr 1fr;
+    height: 100vh;
+    width: 100vw;
+
+}
+
+#myimagecontainer{
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    height: 75vh;
+    width: 30vw;
+    margin: auto auto auto auto;
+    background-image: url('imageofmine.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 100px;
+    opacity: 0;
+    transform: translateX(-20%);
+    z-index: -2;
+    
+
+
+
+    
+    
+}
+
+
+
+#namecontainer{
+    color: white;
+    font-family: 'Cascadia code';
+    font-size: 5vh;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    display: flex;
+    flex-direction: column-reverse;
+    transform: translateX(20%);
+    opacity: 0;
+    z-index: -2;
+    
+    
+}
+
+#aboutme{
+    color: white;
+    font-family: 'Cascadia code';
+    font-size: 3vh;
+    display: flex;
+    flex-direction: column;
+    transform: translateY(-2vh);
+}
+
+#highlighter1{
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    padding-left: 2vw;
+
+    transform: translateX(20%);
+    opacity: 0;
+    z-index: -2;
+
+
+    transition: color 1s, background-color 1s, scale 1s;
+    transition-timing-function: cubic-bezier( 0, 0.86, 0.24, 0.99 );
+    
+}
+
+#highlighter1:hover{
+    color: rgb(21,21,21);
+    background-color: white;
+    scale: 1.2;
+    box-shadow: 1px 1px 200px #ffffff70;
+}
+
+#highlighter2{
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    padding-left: 2vw;
+
+    transform: translateX(20%);
+    opacity: 0;
+    z-index: -2;
+
+    transition: color 1s, background-color 1s, scale 1s;
+    transition-timing-function: cubic-bezier( 0, 0.86, 0.24, 0.99 );
+    
+}
+
+#highlighter2:hover{
+    color: rgb(21,21,21);
+    background-color: white;
+    scale: 1.2;
+    box-shadow: 1px 1px 200px #ffffff70;
+}
+
+#highlighter3{
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    padding-left: 2vw;
+
+    transform: translateX(20%);
+    opacity: 0;
+    z-index: -2;
+
+    transition: color 1s, background-color 1s, scale 1s;
+    transition-timing-function: cubic-bezier( 0, 0.86, 0.24, 0.99 );
+    
+}
+
+#highlighter3:hover{
+    color: rgb(21,21,21);
+    background-color: white;
+    scale: 1.2;
+    box-shadow: 1px 1px 200px #ffffff70;
+}
+
+#highlighter4{
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    padding-left: 2vw;
+
+    transform: translateX(20%);
+    opacity: 0;
+    z-index: -2;
+
+    transition: color 1s, background-color 1s, scale 1s;
+    transition-timing-function: cubic-bezier( 0, 0.86, 0.24, 0.99 );
+    
+}
+
+#highlighter4:hover{
+    color: rgb(21,21,21);
+    background-color: white;
+    scale: 1.2;
+    box-shadow: 1px 1px 200px #ffffff70;
+}
+
+#highlighter5{
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    padding-left: 2vw;
+
+    transform: translateX(20%);
+    opacity: 0;
+    z-index: -2;
+
+    transition: color 1s, background-color 1s, scale 1s;
+    transition-timing-function: cubic-bezier( 0, 0.86, 0.24, 0.99 );
+    
+}
+
+#highlighter5:hover{
+    color: rgb(21,21,21);
+    background-color: white;
+    scale: 1.2;
+    box-shadow: 1px 1px 200px #ffffff70;
+}
+
+#div2{
+    
+    height: 100vh;
+    width: 100vw;
+    
+}
+
+#markscontainer{
+    height: 60vh;
+    width: 70vw;
+    position: relative;
+    top: 40vh;
+    left: 50vw;
+    transform: translate(-50%,-50%);
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    row-gap: 10vh;
+
+}
+
+#marksheading{
+    color: white;
+    font-family: "Cascadia code";
+    font-size: 10vh;
+    text-align: center;
+    position: relative;
+    top: 5vh;
+}
+
+.container{
+    color: white;
+    font-size: 5vh;
+    font-family: 'Cascadia code';
+    text-align: center;
+    margin: 2vh;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    padding: 1vh;
+    padding-top: 5vh;
+    background-color: rgb(30,30,30);
+    border-radius: 6vh;
+    border-color: white;
+    border-width: 0.5vh;
+    border-style: solid;
+    padding-left: auto;
+    padding-right: auto;
+    transition: color 1s, background-color 1s, scale 1s, box-shadow 1s;
+    transition-timing-function: cubic-bezier( 0, 0.86, 0.24, 0.99 );
+
+}
+
+.container:hover{
+    color: rgb(21,21,21);
+    background-color: white;
+    scale: 1.2;
+    box-shadow: 1px 1px 100px #ffffff70;
+
+
+}
+
+#container1{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    
+}
+
+#container2{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    
+}
+
+#container3{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    
+}
+
+#container4{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    
+}
+
+#container5{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    
+}
+
+#container6{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 3;
+    grid-column-end: 4;
+  
+}
+
+@keyframes getin {
+    0% {opacity: 0; transform: translateX(-20%); z-index: -2;}
+    100% {opacity: 1; transform: translatex(0%); z-index: 0;}
+    
+}
+
+
+
+@keyframes getin2{
+    0% {opacity: 0; transform: translateX(20%); z-index: -2;}
+    100% {opacity: 1; transform: translateX(0); z-index: 0;}
+}
+
+#goin1{
+    transform: translateX(20%);
+    opacity: 0;
+    z-index: -2;
+}
+
+
+
+#names{
+    color: rgb(255, 115, 0);
+    opacity: 1;
+}
+
+@keyframes spinner {
+    0% {content: 'a student'; opacity: 0;}
+    7.14% {content: 'a student'; opacity: 1;}
+    14.28% {content: 'a student'; opacity: 0;}
+
+    21.42% {content: 'human'; opacity: 0;}
+    28.57% {content: 'human'; opacity: 1;}
+    35.71% {content: 'human'; opacity: 0;}
+
+    42.85% {content: 'kind'; opacity: 0;}
+    50% {content: 'kind'; opacity: 1;}
+    57.14% {content: 'kind'; opacity: 0;}
+
+    64.28% {content: 'smart'; opacity: 0;}
+    71.42% {content: 'smart'; opacity: 1;}
+    78.57% {content: 'smart'; opacity: 0;}
+
+    85.71% {content: 'Mego3310'; opacity: 0;}
+    92.85% {content: 'Mego3310'; opacity: 1;}
+    100% {content: 'Mego3310'; opacity: 0;}
+}
+
+#names::before{
+    content: 'Mego3310';
+    animation: spinner infinite 16s;
+    animation-timing-function: cubic-bezier(0,1.09,.68,1);
+}
+
+#div3{
+    
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Cascadia code';
+    color: white;
+    display: grid;
+    grid-template-rows: 1fr,2fr;
+    grid-template-columns: auto,auto,auto;
+
+}
+
+#listheadingcontainer{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    height: calc(100vh/4);
+    font-size: 10vh;
+    display: grid;
+    align-items: center;
+    text-align: center;
+}
+
+#cardcontainermain{
+    height: 75vh;
+    width: 94vw;
+    display: grid;
+    grid-template-columns: auto,auto,auto,auto;
+    grid-template-rows: auto;
+    
+    justify-content: space-around;
+    margin-left: 1vw;
+    margin-right: 3vw;
+  
+  
+
+}
+
+#cardcontainer1{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+}
+
+#cardcontainer2{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+
+}
+#cardcontainer3{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 3;
+    grid-column-end: 4;
+  
+}
+#cardcontainer4{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 4;
+    grid-column-end: 5;
+
+}
+
+.cardcontainer{
+    position: relative;
+    height: 50vh;
+    top: 5vh;
+    width: 18vw;
+ 
+        
+    
+}
+
+.card{
+    height: 100%;
+    width: 120%;
+    background-color: rgb(30,30,30);
+    border-radius: 5vh;
+    border-color: white;
+    border-style: solid;
+    border-width: 3px;
+    transform:
+        rotate3d(.5,-.866,0,20deg)
+        rotate(1deg);
+    transition:
+        transform .4s ease,
+        box-shadow 0.4s ease; 
+    
+    
+    
+        
+}
+
+.card:hover{
+    transform:
+      rotate3d(0,0,0,0deg)
+      rotate(0deg);
+    box-shadow: 1px 1px 100px #ffffff70;
+
+}
+
+
+#div4{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 50vh 50vh;
+    
+    height: 100vh;
+    width: 100vw;
+
+}
+
+#thankcontainer{
+    grid-row-start: 1;
+    grid-row-end: 2; 
+    grid-column-start: 1;
+    grid-column-end: 2; 
+    background-color: white; 
+    color: black; 
+    font-size: 40vh;
+    display: grid;
+    align-content: center;
+    text-align: center;
+    height: 50vh;
+    
+}
+
+#thank{
+    height: 50vh;
+    width: 100vw;
+    background-color: rgba(0,0,0,0);
+    transition: text-shadow 1s, transform 1s;
+    transition-timing-function: ease;
+}
+
+#thank:hover{
+    transform: scale(1.1);
+    text-shadow: 4vh 4vh 30px rgba(0, 0, 0, 0.4);
+
+}
+
+#youcontainer{
+    grid-row-start: 2;
+    grid-row-end: 3; 
+    grid-column-start: 1;
+    grid-column-end: 2; 
+    background-color: rgb(0, 0, 0); 
+    color: rgb(255, 255, 255); 
+    font-size: 40vh;
+    display: grid;
+    align-content: center;
+    height: 50vh;
+    width: 100vw;
+    text-align: center;
+    
+}
+
+#you{
+    height: 50vh;
+    width: 100vw;
+    background-color: rgba(0,0,0,0);
+    transition: text-shadow 1s, transform 1s;
+    transition-timing-function: ease;
+}
+
+#you:hover{
+    transform: scale(1.1);
+    text-shadow: 0 0 100px rgba(255, 255, 255, 0.884);
+
+}

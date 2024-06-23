@@ -1,0 +1,156 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cv.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script type="text/javascript" src="https://res.cloudinary.com/veseylab/raw/upload/v1684982764/magicmouse-2.0.0.cdn.min.js"></script>
+   
+
+        
+    
+
+
+
+    
+
+    <title>Portfolio</title>
+</head>
+<body>
+
+
+
+
+    <div class="textbox" id="tb1">Hi!</div>
+    <div class="textbox" id="tb2">This is my Portfolio for the student council.</div>
+    <div class="textbox" id="tb3">Let us start with my Name</div>
+    <button class="button type1" id="inbutton" onclick="zoom()">
+        <span class="btn-txt" id="tobe">Hello</span>
+        
+
+        <script>
+        function zoom(){
+            document.getElementById('inbutton').style.backgroundColor = 'white'
+            document.getElementById('inbutton').style.transition = 'width height border-width 0.5s ease-in'
+            document.getElementById('inbutton').style.width = '120vw'
+            document.getElementById('inbutton').style.height = '0vh'
+            document.getElementById('inbutton').style.borderWidth = '0'
+            document.getElementById('tb3').style.animation = 'disappear 0.5s ease-out'
+            var arr = Array.from(document.getElementsByClassName('textbox'))
+            arr.map((elem) => elem.remove())
+            var inbattun = document.getElementById('inbutton')
+            var parentofinbattun = inbattun.parentElement
+            setTimeout(()=> {parentofinbattun.removeChild(inbattun)},700)
+
+            delete arr, inbattun, parentofinbattun 
+
+            document.body.style = "background-color: rgb(21, 21, 21); margin: 0; padding: 0; overflow-x: hidden; overflow-y:auto;"
+            console.log("zoomed")
+
+            setTimeout(()=>{document.getElementById("myimagecontainer").style = 'animation-name: getin; animation-duration: 1s; animation-fill-mode:both; animation-timing-function: ease-in-out;'},1000)
+            document.getElementById("namecontainer").style = 'animation-name: getin2; animation-duration: 1s; animation-fill-mode:both; animation-timing-function: ease-in-out; animation-delay: 1200ms;'
+            document.getElementById("goin1").style = 'animation-name: getin2; animation-duration: 1s; animation-fill-mode:both; animation-timing-function: ease-in-out; animation-delay: 1300ms;'
+            document.getElementById("highlighter1").style = 'animation-name: getin2; animation-duration: 1s; animation-fill-mode:both; animation-timing-function: ease-in-out; animation-delay: 1400ms;'
+            document.getElementById("highlighter2").style = 'animation-name: getin2; animation-duration: 1s; animation-fill-mode:both; animation-timing-function: ease-in-out; animation-delay: 1500ms;'
+            document.getElementById("highlighter3").style = 'animation-name: getin2; animation-duration: 1s; animation-fill-mode:both; animation-timing-function: ease-in-out; animation-delay: 1600ms;'
+            document.getElementById("highlighter4").style = 'animation-name: getin2; animation-duration: 1s; animation-fill-mode:both; animation-timing-function: ease-in-out; animation-delay: 1700ms;'
+            document.getElementById("highlighter5").style = 'animation-name: getin2; animation-duration: 1s; animation-fill-mode:both; animation-timing-function: ease-in-out; animation-delay: 1800ms;'
+            
+            
+
+            console.log("zoomed")
+
+
+        }
+
+        </script>
+        
+        
+    </button>  
+    
+    <div></div>
+    
+
+    <div id="div1" style="height: 100vh; width: 100vw; top: 0vh; position:relative;">  
+        <div id="myimagecontainer">
+        </div>
+        <div id="namecontainer">
+            <div style="height: 20vh;"></div>
+            <div id="name">My name is Akshit Kumar Singh. <br>I am <span id="names"></span></div>            
+        </div>   
+
+        <div id="aboutme">
+            <div id="goin1">About me <br><br><br></div>
+            <div id="highlighter1">Class: 11 C</div>
+            <div id="highlighter2">House: Ravi</div>
+            <div id="highlighter3">Fathers name: Dr. Raj Pal Singh</div>
+            <div id="highlighter4">Mothers name: Dr. Suneeta Singh</div>
+            <div id="highlighter5">Posts: Vice Head Boy, Vice Head Tech</div>
+        </div>
+    </div>
+
+    <div id="div2">
+        <div id="marksheading">
+            Marks in examinations
+        </div>
+        <script>
+            ScrollReveal().reveal('#marksheading')
+        </script>
+
+        <div id="markscontainer">
+            <div class="container" id="container1">Science<br><br><span style="font-size: 3vh;">95/100<sup>*</sup> </span></div>
+            <div class="container" id="container2">Maths<br><br><span style="font-size: 3vh;">99/100</span></div>
+            <div class="container" id="container3">Social<br><br><span style="font-size: 3vh;">97/100</span></div>
+            <div class="container" id="container4">Ai<br><br><span style="font-size: 3vh;">99/100</span></div>
+            <div class="container" id="container5">English<br><br><span style="font-size: 3vh;">87/100<sup>*</sup> </span></div>
+            <div class="container" id="container6">Sanskrit<br><br><span style="font-size: 3vh;">100/100</span></div>
+            <script>
+                ScrollReveal().reveal('.container')
+            </script>
+        </div>
+
+
+    </div>
+    
+    <div id="div3">
+
+        <div id="listheadingcontainer">Here are my achievements</div>
+        <script>ScrollReveal().reveal('#listheadingcontainer')</script>
+        <div id="cardcontainermain">
+            <div id="cardcontainer1" class="cardcontainer">
+                <div class="card">
+                    <div id="card1" style="padding: 3vh;"><span style="font-size: 5vh; text-align: left;">National Topper</span><br><br><br> <span style=" text-align: justify;">I cracked the IIT Genius exam and acquired a position in the top 10 across India, For which I was fascilitated with Silver Plated Medal</span></div>
+                    <script>ScrollReveal().reveal('#card1')</script>
+                </div>
+            </div>
+            <div id="cardcontainer2" class="cardcontainer">
+                <div class="card">
+                    <div id="card2" style="padding: 3vh;"><span style="font-size: 5vh; text-align: left;">NCSC State Topper</span><br><br><br> <span style=" text-align: justify;">I got qualified for the National Childrens Science Congress State Level, and was invited to bhopla for it. There I got the Best Model Award</span></div>
+                    <script>ScrollReveal().reveal('#card2')</script>
+                </div>
+            </div>
+            <div id="cardcontainer3" class="cardcontainer">
+                <div class="card">
+                    <div id="card3" style="padding: 3vh;"><span style="font-size: 5vh; text-align: left;">Medha Pratiyogita</span><br><br><br> <span style=" text-align: justify;">I cleared the Plant level and my team was selected but the NTPC Vindhyanagar Project for the regional level of the quiz competition</span></div>
+                    <script>ScrollReveal().reveal('#card3')</script>
+                </div>
+            </div>
+            <div id="cardcontainer4" class="cardcontainer">
+                <div class="card">
+                    <div id="card4" style="padding: 3vh;"><span style="font-size: 5vh; text-align: left;">KAMP Nasta state topper</span><br><br><br> <span style=" text-align: justify;">I have been a State Topper for two consicutive times, and was invited to CSIR Delhi for a scientific excursion</span></div>
+                    <script>ScrollReveal().reveal('#card4')</script>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="div4">
+        <div id="thankcontainer">
+            <div id="thank">Thank</div>
+        </div>
+        <div id="youcontainer">
+            <div id="you">You</div>
+        </div>
+    </div>
+</body>
+</html>
