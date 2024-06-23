@@ -455,6 +455,7 @@ body{
 #names{
     color: rgb(255, 115, 0);
     opacity: 1;
+    text-decoration: underline;
 }
 
 @keyframes spinner {
@@ -570,12 +571,10 @@ body{
     border-color: white;
     border-style: solid;
     border-width: 3px;
-    transform:
-        rotate3d(.5,-.866,0,20deg)
-        rotate(1deg);
+  
     transition:
-        transform .4s ease,
-        box-shadow 0.4s ease; 
+        box-shadow 0.4s ease,
+        transform 0.4s ease; 
     
     
     
@@ -583,10 +582,8 @@ body{
 }
 
 .card:hover{
-    transform:
-      rotate3d(0,0,0,0deg)
-      rotate(0deg);
     box-shadow: 1px 1px 100px #ffffff70;
+    transform: scale(1.1);
 
 }
 
