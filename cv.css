@@ -12,7 +12,7 @@ html{
 }
 
 body{
-    background-color: rgb(30,30,30);
+    background-color: rgb(0, 0, 0);
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -232,7 +232,7 @@ body{
 }
 
 #highlighter1:hover{
-    color: rgb(21,21,21);
+    color: rgb(0, 0, 0);
     background-color: white;
     scale: 1.2;
     box-shadow: 1px 1px 200px #ffffff70;
@@ -253,7 +253,7 @@ body{
 }
 
 #highlighter2:hover{
-    color: rgb(21,21,21);
+    color: rgb(0, 0, 0);
     background-color: white;
     scale: 1.2;
     box-shadow: 1px 1px 200px #ffffff70;
@@ -274,7 +274,7 @@ body{
 }
 
 #highlighter3:hover{
-    color: rgb(21,21,21);
+    color: rgb(0, 0, 0);
     background-color: white;
     scale: 1.2;
     box-shadow: 1px 1px 200px #ffffff70;
@@ -295,7 +295,7 @@ body{
 }
 
 #highlighter4:hover{
-    color: rgb(21,21,21);
+    color: rgb(0, 0, 0);
     background-color: white;
     scale: 1.2;
     box-shadow: 1px 1px 200px #ffffff70;
@@ -316,7 +316,7 @@ body{
 }
 
 #highlighter5:hover{
-    color: rgb(21,21,21);
+    color: rgb(0, 0, 0);
     background-color: white;
     scale: 1.2;
     box-shadow: 1px 1px 200px #ffffff70;
@@ -375,7 +375,7 @@ body{
 }
 
 .container:hover{
-    color: rgb(21,21,21);
+    color: rgb(0, 0, 0);
     background-color: white;
     scale: 1.2;
     box-shadow: 1px 1px 100px #ffffff70;
@@ -566,7 +566,7 @@ body{
 .card{
     height: 100%;
     width: 120%;
-    background-color: rgb(30,30,30);
+    background-color: rgb(11, 11, 11);
     border-radius: 5vh;
     border-color: white;
     border-style: solid;
@@ -589,70 +589,27 @@ body{
 
 
 #div4{
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 50vh 50vh;
     
     height: 100vh;
     width: 100vw;
-
+    font-size: 20vh;
+    color: white;
+    font-family: 'Cascadia Code';
+    position: relative;
+    box-sizing: border-box;
 }
 
-#thankcontainer{
-    grid-row-start: 1;
-    grid-row-end: 2; 
-    grid-column-start: 1;
-    grid-column-end: 2; 
-    background-color: white; 
-    color: black; 
-    font-size: 40vh;
-    display: grid;
-    align-content: center;
-    text-align: center;
-    height: 50vh;
-    
-}
-
-#thank{
-    height: 50vh;
-    width: 100vw;
-    background-color: rgba(0,0,0,0);
-    transition: text-shadow 1s, transform 1s;
-    transition-timing-function: ease;
-}
-
-#thank:hover{
-    transform: scale(1.1);
-    text-shadow: 4vh 4vh 30px rgba(0, 0, 0, 0.4);
-
-}
-
-#youcontainer{
-    grid-row-start: 2;
-    grid-row-end: 3; 
-    grid-column-start: 1;
-    grid-column-end: 2; 
-    background-color: rgb(0, 0, 0); 
-    color: rgb(255, 255, 255); 
-    font-size: 40vh;
-    display: grid;
-    align-content: center;
-    height: 50vh;
-    width: 100vw;
-    text-align: center;
-    
+.kk{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0);
+    top: 20vh;
+    margin: 5vh;
 }
 
 #you{
-    height: 50vh;
-    width: 100vw;
-    background-color: rgba(0,0,0,0);
-    transition: text-shadow 1s, transform 1s;
-    transition-timing-function: ease;
+    right: 1.5vh;
 }
 
-#you:hover{
-    transform: scale(1.1);
-    text-shadow: 0 0 100px rgba(255, 255, 255, 0.884);
-
+#thank{
+    left: 2vh;
 }
