@@ -1,6 +1,12 @@
+@font-face {
+    font-family: 'Cascadia Code Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Cascadia Code Regular'), url('Cascadia.woff') format('woff');
+    }
 
 html{
-    font-family: "Cascadia code";
+    font-family: "Cascadia Code Regular";
 }
 
 html::-webkit-scrollbar{
@@ -13,7 +19,7 @@ html{
 }
 
 body{
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -22,7 +28,6 @@ body{
 
 }
 
-@import url('https://fonts.cdnfonts.com/css/cascadia-code');
 
 .textbox{
     color: white;
@@ -103,7 +108,7 @@ body{
     left: 50vw;
     top: 70vh;
     transform: translate(-50%,-20vh);
-    font-family: 'Cascadia code';
+    font-family: 'Cascadia Code Regular';
     font-size: larger;
     animation-name: buttonappears;
     animation-duration: 2s;
@@ -164,6 +169,7 @@ body{
     grid-template-rows: 0.8fr 1fr;
     height: 100vh;
     width: 100vw;
+    background-color: white;
 
 }
 
@@ -195,7 +201,7 @@ body{
 
 #namecontainer{
     color: white;
-    font-family: 'Cascadia code';
+    font-family: 'Cascadia Code Regular';
     font-size: 5vh;
     grid-row-start: 1;
     grid-row-end: 1;
@@ -212,7 +218,7 @@ body{
 
 #aboutme{
     color: white;
-    font-family: 'Cascadia code';
+    font-family: 'Cascadia Code Regular';
     font-size: 3vh;
     display: flex;
     flex-direction: column;
@@ -349,7 +355,7 @@ body{
 
 #marksheading{
     color: rgb(0, 0, 0);
-    font-family: "Cascadia code";
+    font-family: "Cascadia Code Regular";
     font-size: 10vh;
     text-align: center;
     position: relative;
@@ -359,7 +365,7 @@ body{
 .container{
     color: white;
     font-size: 5vh;
-    font-family: 'Cascadia code';
+    font-family: 'Cascadia Code Regular';
     text-align: center;
     margin: 2vh;
     margin-left: 3vw;
@@ -510,7 +516,7 @@ body{
     
     height: 100vh;
     width: 100vw;
-    font-family: 'Cascadia code';
+    font-family: 'Cascadia Code Regular';
     color: white;
     display: grid;
     grid-template-rows: 1fr,2fr;
@@ -629,7 +635,7 @@ body{
     width: 100vw;
     font-size: 20vh;
     color: white;
-    font-family: 'Cascadia Code';
+    font-family: 'Cascadia Code Regular';
     position: relative;
     box-sizing: border-box;
 }
@@ -648,3 +654,22 @@ body{
 #thank{
     left: 2vh;
 }
+
+#div0{
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    color: white;
+    font-family: "Cascadia Code Regular";
+    font-size: 10vh;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#hero1, #hero2{
+    font-size: 14vh;
+}
+
+
